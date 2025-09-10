@@ -14,9 +14,15 @@ function updateList(){
 }
 
 function adicionarAmigo(){
-    const amigo = document.querySelector('input#amigo').value
-    amigos.push(amigo)
-    updateList()
+    if(document.querySelector('input#amigo').value == "")
+        alert("Insira um nome válido")
+    else if(amigos.includes(document.querySelector('input#amigo').value))
+        alert("Insira um amigo que não esteja na lista")
+    else{
+        const amigo = document.querySelector('input#amigo').value
+        amigos.push(amigo)
+        updateList()
+    }
 }
 
 function sortearAmigo(){
