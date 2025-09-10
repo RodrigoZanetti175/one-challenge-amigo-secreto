@@ -26,7 +26,7 @@ function adicionarAmigo(){
 }
 
 function sortearAmigo(){
-    const amigoSelecionado = amigos[Math.ceil(Math.random()*amigos.length)-1]
+    const amigoSelecionado = amigos[Math.floor(Math.random() * amigos.length)]
     amigos = []
     updateList()
     document.querySelector("ul#resultado").innerHTML = amigoSelecionado
